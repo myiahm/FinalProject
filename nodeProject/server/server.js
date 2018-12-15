@@ -15,7 +15,8 @@ app.get('/about', function(req, res) {
 
 // about page
 app.get('/profile/:name', function(req, res) {
-    res.render('profile', {person: req.params.name});
+    var usersinfo ={kid:"Beaute'", Age:8,  kid: "Kevian", Age: 6, kid:"Bella",Age:3};
+    res.render('profile', {user: req.params.name, usersinfo: usersinfo});
 });
 
 app.listen(8080);
