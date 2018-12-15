@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Wheel of Fortune Bingo</title>
     <script src=”//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js”></script>
     <link rel=”stylesheet” href=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css”>
     <script src=”//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js”></script>
@@ -26,6 +25,7 @@
             left:0;
         }
         #question{
+
             position: absolute;
             width:400px;
             height:500px;
@@ -33,6 +33,8 @@
             left:520px;
         }
         #question h1{
+            color: aliceblue;
+
             font-size: 40px;
             font-weight: bold;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -44,13 +46,14 @@
             transform:translate(0,-50%);
         }
         body{
-            background-color: deeppink;
+            background-color: grey;
         }
+
     </style>
 
 </head>
 <body>
-<div>
+<div class="text-center">
 <h1>Welcome to the profile of <%= person %></h1>
 <div>
 <div  style="margin-top: 15%" id="chart"></div>
