@@ -1,10 +1,19 @@
+const sqlite3 = require('sqlite3').verbose();
 // server.js
 // load the things we need
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+// in latest body-parser use like below.
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
+
 
 // use res.render to load up an ejs view file
 
@@ -15,8 +24,27 @@ app.get('/about', function(req, res) {
 
 // about page
 app.get('/profile/:name', function(req, res) {
-    var usersinfo ={kid:"Beaute'", Age:8,  kid: "Kevian", Age: 6, kid:"Bella",Age:3};
+    var usersinfo ={kid:"Beaute'",kid: "Kevian", kid:"Bella"};
     res.render('profile', {user: req.params.name, usersinfo: usersinfo});
+});
+app.post('/post/',function(request,response){
+    console.log(request.body) //you will get your data in this as object.
+});
+
+// open database in memory
+let db = new sqlite3.Database(':memory:', (err) => {
+    if (err) {
+        return console.error(err.message);
+    }
+    console.log('Connected to the in-memory SQlite database.');
+});
+
+// close the database connection
+db.close((err) => {
+    if (err) {
+        return console.error(err.message);
+    }
+    console.log('Close the database connection.');
 });
 
 app.listen(8080);
