@@ -15,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nodeProject/server/views/profile.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -24,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nodeProject/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
@@ -197,6 +197,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/nodeProject/server/views/profile.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -205,6 +206,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nodeProject/server/MainSpinner.html">
+=======
+    <entry file="file://$PROJECT_DIR$/nodeProject/server/views/partials/header.ejs">
+>>>>>>> 1dfe8c674cfb3d51a4ad49cde883f9b3401196f9
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="65" column="33" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
@@ -221,6 +225,13 @@
     <entry file="file://$PROJECT_DIR$/nodeProject/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodeProject/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
           <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
         </state>
       </provider>
