@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="008abf0e-4561-42cf-a80c-96c7107ac99c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodeProject/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/nodeProject/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodeProject/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/nodeProject/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodeProject/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/nodeProject/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodeProject/server/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/nodeProject/server/views/partials/header.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodeProject/server/views/profile.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/nodeProject/server/views/profile.ejs" afterDir="false" />
-    </list>
+    <list default="true" id="008abf0e-4561-42cf-a80c-96c7107ac99c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nodeProject/server/views/profile.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+            <state relative-caret-position="149">
+              <caret line="199" column="26" lean-forward="true" selection-start-line="199" selection-start-column="26" selection-end-line="199" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -255,8 +248,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nodeProject/server/views/profile.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+        <state relative-caret-position="149">
+          <caret line="199" column="26" lean-forward="true" selection-start-line="199" selection-start-column="26" selection-end-line="199" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
