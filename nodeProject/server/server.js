@@ -8,6 +8,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 // in latest body-parser use like below.
 app.use(bodyParser.urlencoded({ extended: true }));
+// using app.use to serve up static CSS files in public/assets/ folder when /public link is called in ejs files
+// app.use("/route", express.static("foldername"));
+app.use('/public', express.static('public'));
 
 
 

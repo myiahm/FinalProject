@@ -1,88 +1,37 @@
-<!DOCTYPE html>
-<html>
+<html lang="">
 <head>
     <meta charset="utf-8">
-    <script src=”//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js”></script>
-    <link rel=”stylesheet” href=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css”>
-    <script src=”//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js”></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src=”//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js”></script>-->
+    <!--<link rel=”stylesheet” href=”http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css”>-->
+    <!--<script src=”//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js”></script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <link href= "/public/assets/styles.css" rel="stylesheet" type="text/css" />
 
 
-    <style type="text/css">
-        * {
-            border: deepskyblue solid 2px;
-        }
 
-        text {
-            font-family: Helvetica, Arial, sans-serif;
-            font-size: 15px;
-            pointer-events: none;
-        }
-
-        #chart {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            top: 0;
-            left: 0;
-        }
-
-        #question {
-
-            position: absolute;
-            width: 400px;
-            height: 500px;
-            top: 0;
-            left: 520px;
-        }
-
-        #question h1 {
-            color: aliceblue;
-
-            font-size: 40px;
-            font-weight: bold;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            position: absolute;
-            padding: 0;
-            margin: 0;
-            top: 50%;
-            -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-        }
-
-        body {
-            background-color: grey;
-        }
-
-    </style>
+    <title>Problem Solver </title>
 
 </head>
 <body>
-<div id="namearea">
-    <div></div>
-
+<div class="jumbotron jumbotron-fluid">
+    <h1>The Problem Solver</h1>
+    <div class="container" id="namearea">
+    </div>
 </div>
-<!--<div>-->
-<!--<form action="/'profile/:name'/" method="post">-->
-<!--<label for="name">Enter name: </label>-->
-<!--<input id="name" type="text" name="field">-->
-<!--<input type="submit" value="OK">-->
-<!--</form>-->
-<!--<input type="text" id="name">-->
-<!--<button type="submit" onclick="people">submit</button>-->
-<!--<h1 id="namespace"></h1>-->
 
-
-<!--&lt;!&ndash;<h1>nameI</h1>&ndash;&gt;-->
-<!--</div>-->
 <div style="margin-top: 15%" id="chart"></div>
 <div style="margin-top: 15%" id="question"><h1></h1></div>
 
 
-<script src="namespinner.js"></script>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
-    var nameI = document.getElementById(name);
     var padding = {top: 20, right: 40, bottom: 0, left: 0},
         w = 500 - padding.left - padding.right,
         h = 500 - padding.top - padding.bottom,
@@ -151,12 +100,13 @@
         peoplelist = "";
         for (i = 0; i < people.length; i++) {
             let jobNames = "";
-            if (people[i].jobname)
-            {
+            if (people[i].jobname) {
                 jobNames = people[i].jobname;
             }
-            console.log(" this is name: "+people[i].name+"this is job:"+ jobNames);
-            peoplelist += (people[i].name + " * " + jobNames + " <br/>");
+            console.log(" this is name: " + people[i].name + "this is job:" + jobNames);
+            peoplelist += (people[i].name + " - " + jobNames + " <br/>");
+
+
 
 
         }
@@ -224,7 +174,7 @@
         console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
         if (oldpick.length == data.length) {
             console.log("done");
-            alert("Your Done ")
+            alert("Problem Solved!!!! ")
             console.log(people[i]);
 
             // printToPage();
@@ -256,28 +206,24 @@
                 //populate question
                 d3.select("#question h1")
                     .text(data[picked].question);
-                console.log("this is person index "+currentPersonIndex);
+                console.log("this is person index " + currentPersonIndex);
 
-                if(people[currentPersonIndex].jobname)
-                {
+                if (people[currentPersonIndex].jobname) {
 
-                    people[currentPersonIndex].jobname  +=( ", " +data[picked].label);
-                    console.log("person already has jobs "+ people[currentPersonIndex].jobname );
-                }else {
-                    people[currentPersonIndex].jobname  = data[picked].label;
+                    people[currentPersonIndex].jobname += (", " + data[picked].label);
+                    console.log("person already has jobs " + people[currentPersonIndex].jobname);
+                } else {
+                    people[currentPersonIndex].jobname = data[picked].label;
 
                 }
 
-                console.log("this is spin count"+spincount);
+                console.log("this is spin count" + spincount);
                 console.log(people[currentPersonIndex].jobname)
                 oldrotation = rotation;
                 spincount++;
-                if (currentPersonIndex + 1 < people.length)
-                {
+                if (currentPersonIndex + 1 < people.length) {
                     currentPersonIndex++;
-                }
-                else
-                {
+                } else {
                     currentPersonIndex = 0;
                 }
                 printToPage();
