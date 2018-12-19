@@ -117,7 +117,8 @@
             for (i = 0; i < count; i++) {
                 var names = prompt("Enter name: ")
                 person = {
-                    name: names
+                    name: names,
+                    // jobname: "hi"
 
                 }
                 // people.push(names)
@@ -125,14 +126,7 @@
                 // console.log(names)
                 // console.log(people)
             }
-            peoplelist = "";
-            for (i = 0; i < people.length; i++) {
-                console.log(people[i]);
-                peoplelist += (people[i].name + " * " + people[i].jobname + " <br/>");
-
-
-            }
-
+            printToPage();
 
         }
 
@@ -154,6 +148,19 @@
     }
 
     function printToPage() {
+        peoplelist = "";
+        for (i = 0; i < people.length; i++) {
+            let jobNames = "";
+            if (people[i].jobname)
+            {
+                jobNames = people[i].jobname;
+            }
+            console.log(" this is name: "+people[i].name+"this is job:"+ jobNames);
+            peoplelist += (people[i].name + " * " + jobNames + " <br/>");
+
+
+        }
+
         console.log("Start of people list")
         console.log(peoplelist);
         console.log("End of people list")
@@ -207,16 +214,20 @@
     container.on("click", spin);
 
     var spincount = 0;
+    var currentPersonIndex = 0;
 
     function spin(d) {
-        printToPage();
+        // printToPage();
 
         container.on("click", null);
         //all slices have been seen, all done
         console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
         if (oldpick.length == data.length) {
             console.log("done");
-            printToPage();
+            alert("Your Done ")
+            console.log(people[i]);
+
+            // printToPage();
             container.on("click", null);
             return;
         }
@@ -245,10 +256,31 @@
                 //populate question
                 d3.select("#question h1")
                     .text(data[picked].question);
-                people[spincount].jobname = data[picked].question;
-                console.log("this is spin count"+people[spincount]);
+                console.log("this is person index "+currentPersonIndex);
+
+                if(people[currentPersonIndex].jobname)
+                {
+
+                    people[currentPersonIndex].jobname  +=( ", " +data[picked].label);
+                    console.log("person already has jobs "+ people[currentPersonIndex].jobname );
+                }else {
+                    people[currentPersonIndex].jobname  = data[picked].label;
+
+                }
+
+                console.log("this is spin count"+spincount);
+                console.log(people[currentPersonIndex].jobname)
                 oldrotation = rotation;
                 spincount++;
+                if (currentPersonIndex + 1 < people.length)
+                {
+                    currentPersonIndex++;
+                }
+                else
+                {
+                    currentPersonIndex = 0;
+                }
+                printToPage();
                 container.on("click", spin);
             });
     }
