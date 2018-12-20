@@ -28,6 +28,11 @@
 
 <div style="margin-top: 15%" id="chart"></div>
 <div style="margin-top: 15%" id="question"><h1></h1></div>
+<div class= "pull-right">
+    <img src="../public/assets/problem.jpg" id="big">
+    <a type="button"href="about/"  class="btn btn-danger">About</a>
+
+</div>
 
 
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -174,7 +179,7 @@
         console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
         if (oldpick.length == data.length) {
             console.log("done");
-            alert("Problem Solved!!!! ")
+            alert(picture.html)
             console.log(people[i]);
 
             // printToPage();
@@ -274,6 +279,9 @@
         }
         return array;
     }
+
 </script>
+
 </body>
+
 </html>

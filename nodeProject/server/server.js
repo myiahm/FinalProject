@@ -14,6 +14,7 @@ app.use('/public', express.static('public'));
 
 
 
+
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
@@ -21,14 +22,17 @@ app.set('view engine', 'ejs');
 // use res.render to load up an ejs view file
 
 // index page
-app.get('/about', function(req, res) {
-    res.render('pages/index');
+app.get('', function(req, res) {
+    res.render('index');
 });
 
 // about page
-app.get('/profile/:name', function(req, res) {
+app.get('/start/', function(req, res) {
     var usersinfo ={kid:"Beaute'",kid: "Kevian", kid:"Bella"};
     res.render('profile', {user: req.params.name, usersinfo: usersinfo});
+});
+app.get('/about/', function(req, res) {
+    res.render('about');
 });
 app.post('/post/',function(request,response){
     console.log(request.body) //you will get your data in this as object.
