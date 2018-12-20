@@ -31,7 +31,7 @@ app.get('/start/', function(req, res) {
     var usersinfo ={kid:"Beaute'",kid: "Kevian", kid:"Bella"};
     res.render('profile', {user: req.params.name, usersinfo: usersinfo});
 });
-app.get('/about/', function(req, res) {
+app.get('/info/', function(req, res) {
     res.render('about');
 });
 app.post('/post/',function(request,response){
